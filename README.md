@@ -28,7 +28,7 @@ CODEJUMPの課題を通して、カルーセルスライダーの実装や、CSS
 
 ## Demo
 
-（公開URLをここに貼る）
+https://satoru-tanaka-1977.github.io/codejump-applied-media/
 
 ## 制作状況
 
