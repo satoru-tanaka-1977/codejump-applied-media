@@ -32,4 +32,4 @@ https://satoru-tanaka-1977.github.io/codejump-applied-media/
 
 ## 制作状況
 
-制作中
+制作中 (2026.9.30~)
