@@ -3,8 +3,9 @@ html {
   font-size: 100%;
 }
 body {
-  color: #333;
-  font-size: 0.875rem;
+  color: #121212;
+  font-size: 0.9rem;
+  line-height: 1.7;
 }
 a {
   color: #333;
@@ -50,12 +51,12 @@ li {
 #navi {
   position: fixed;
   top: 0;
-  /* left: -300px; */
-  /* opacity: 0; */
+  left: -300px;
+  opacity: 0;
   bottom: 0;
   width: 300px;
   background-color: #121212;
-   /* ナビ内の基本文字色を白にする（a要素にも別途指定） */
+  /* ナビ内の基本文字色を白にする（a要素にも別途指定） */
   color: #fff;
   padding: 60px 25px;
   z-index: 20;
@@ -65,10 +66,29 @@ li {
   overflow-y: auto; /* 縦方向にはみ出したらスクロール */
   -webkit-overflow-scrolling: touch; /* iOSでタッチスクロールを滑らかに */
 }
-
-
-ここまで
-
+#navi a {
+  color: #fff;
+}
+.open #navi {
+  left: 0;
+  opacity: 1;
+}
+#navi ul {
+  margin: 0;
+  padding: 0;
+}
+#navi ul.nav-menu {
+  margin-bottom: 60px;
+  border-top: solid 1px #fff;
+}
+#navi ul.nav-menu li {
+  border-bottom: solid 1px #fff;
+  padding: 20px 0;
+  position: relative;
+}
+#navi ul.nav-sns li {
+  padding: 5px 0;
+}
 
 /* 外枠（ボタンの配置と大きさ） */
 .toggle_btn {
@@ -80,6 +100,7 @@ li {
   height: 30px;
   cursor: pointer;
   z-index: 20;
+  transition: all 0.5s;
 }
 
 /* 3本線共通の見た目 */
@@ -107,4 +128,33 @@ li {
 /* 3本目（下）の位置 */
 .toggle_btn span:nth-child(3) {
   bottom: 4px;
+}
+
+.open .toggle_btn span {
+  background-color: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+  transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+  opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+  transform: translateY(-10px) rotate(315deg);
+}
+#mask {
+  display: none;
+  transition: all 0.5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.8;
+  z-index: 10;
+  cursor: pointer;
 }
