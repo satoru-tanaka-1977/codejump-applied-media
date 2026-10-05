@@ -37,14 +37,16 @@ li {
   transition: all 1s;
 } */
 
-ヘッダー #header {
+/* ヘッダー  */
+
+#header {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  position: fixed;
-  background-color: #fff;
-  z-index: 10;
   padding: 20px 40px;
+  position: fixed;
+  z-index: 10;
+  background-color: #fff;
 }
 #navi {
   position: fixed;
@@ -247,7 +249,7 @@ li {
   padding: 10px;
   margin-bottom: 20px;
 }
-#contact .contact-form .button input{
+#contact .contact-form .button input {
   width: 200px;
   color: #fff;
   background-color: #121212;
@@ -266,6 +268,51 @@ li {
   background-color: #121212;
   color: #fff;
   text-align: center;
-  font-size: 0.75em;
+  font-size: 0.75rem;
   padding: 10px;
+}
+
+/* レスポンシブ */
+
+@media screen and (max-width: 600px) {
+  .sec-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  #header {
+    padding: 20px 16px;
+  }
+  .toggle_btn {
+    right: 20px;
+  }
+  #bg-video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  #pickup {
+    padding: 80px 0;
+  }
+  #pickup .slick-area li{
+    padding: 0 20px;
+  }
+  #feature {
+    padding: 80px 16px;
+  }
+   #feature .grid .item-content {
+    padding: 16px;
+  }
+#contact {
+  padding: 80px 0;
+}
+#contact .content {
+  flex-direction: column;
+}
+#contact .contact-info,
+#contact .contact-form {
+  width: 100%;
+}
+#contact .contact-form .button input {
+    width: 100%;
+  }
 }
